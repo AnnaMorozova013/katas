@@ -15,3 +15,18 @@ function queueTime(customers, n) {
     // return last index of array
     return result[result.length - 1]
 }
+
+// solution to: https://www.codewars.com/kata/54b42f9314d9229fd6000d9c/train/javascript
+// 'Duplicate Encoder'
+
+function duplicateEncode(word) {
+    let string = word.toLowerCase();
+      let encodedString = '';
+      for (var i = 0; i < string.length; i++) {
+        if (string.lastIndexOf(string[i]) === string.indexOf(string[i])) {
+          encodedString += '('
+        }
+        else encodedString += ')'
+      }
+      return encodedString
+    }
