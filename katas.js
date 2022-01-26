@@ -51,3 +51,20 @@ function duplicateEncode(word) {
         return names[0] + `, ` + names[1] + ` and ` + (names.length - 2) + ` others like this`;
       }
     }
+
+    // solution to: https://www.codewars.com/kata/5d23d89906f92a00267bb83d
+    // 'New Cashier Does Not Know About Space or Shift'
+
+    function getOrder(input) {
+      let orderedInput = ''
+      const menu = ['Burger', 'Fries', 'Chicken', 'Pizza', 'Sandwich', 'Onionrings', 'Milkshake', 'Coke'] 
+      for(let food of menu) {
+        const num = input.split(food.toLowerCase()).length - 1
+        //console.log(num)
+        for (let i=0; i < num; i++) {
+          orderedInput += ' ' + food
+        }
+    
+        }
+        return orderedInput.slice(1);
+      }
