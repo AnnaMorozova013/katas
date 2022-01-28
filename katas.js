@@ -85,3 +85,19 @@ function isPangram(string) {
 
   return true;
 }
+
+// solution to: https://www.codewars.com/kata/554ca54ffa7d91b236000023/javascript
+// 'Delete occurrences of an element if it occurs more than n times'
+
+function deleteNth(arr,n){
+  const occNum = {};
+  return arr.filter(num => {
+    if (occNum[num]) {
+      occNum[num]++;
+    } else {
+      occNum[num] = 1;
+    }
+    // Return boolean whether to include current number or not
+    return occNum[num] <= n;
+  });
+}
