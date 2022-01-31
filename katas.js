@@ -101,3 +101,24 @@ function deleteNth(arr,n){
     return occNum[num] <= n;
   });
 }
+
+// solution to: https://www.codewars.com/kata/5526fc09a1bbd946250002dc/javascript
+// 'Find the parity outlier'
+
+function findOutlier(integers){
+  let oddNums =[];
+  let evenNums = [];
+  
+  for(let i = 0; i< integers.length; i++) {
+   if(integers[i] % 2 === 0){
+        evenNums.push(integers[i]);
+      }else{
+        oddNums.push(integers[i]);
+      }
+    }
+    if(evenNums.length == 1){
+      return evenNums[0];
+    }else{
+      return oddNums[0];
+    }
+  }
