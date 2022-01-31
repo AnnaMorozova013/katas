@@ -89,7 +89,7 @@ function isPangram(string) {
 // solution to: https://www.codewars.com/kata/554ca54ffa7d91b236000023/javascript
 // 'Delete occurrences of an element if it occurs more than n times'
 
-function deleteNth(arr,n){
+function deleteNth(arr, n) {
   const occNum = {};
   return arr.filter(num => {
     if (occNum[num]) {
@@ -105,20 +105,20 @@ function deleteNth(arr,n){
 // solution to: https://www.codewars.com/kata/5526fc09a1bbd946250002dc/javascript
 // 'Find the parity outlier'
 
-function findOutlier(integers){
-  let oddNums =[];
+function findOutlier(integers) {
+  let oddNums = [];
   let evenNums = [];
-  
-  for(let i = 0; i< integers.length; i++) {
-   if(integers[i] % 2 === 0){
-        evenNums.push(integers[i]);
-      }else{
-        oddNums.push(integers[i]);
-      }
-    }
-    if(evenNums.length == 1){
-      return evenNums[0];
-    }else{
-      return oddNums[0];
+
+  for (let i = 0; i < integers.length; i++) {
+    if (integers[i] % 2 === 0) {
+      evenNums.push(integers[i]);
+    } else {
+      oddNums.push(integers[i]);
     }
   }
+  if (evenNums.length == 1) {
+    return evenNums[0];
+  } else {
+    return oddNums[0];
+  }
+}
