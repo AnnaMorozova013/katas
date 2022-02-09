@@ -138,8 +138,8 @@ function moveZeros(arr) {
   const newArr = [...arr];
   newArr.forEach((element) => {
     if (element === 0) {
-      newArr.splice(newArr.indexOf(element), 1) && newArr.push(element);
+      newArr.splice(newArr.indexOf(element), 1) && newArr.push(element)
     }
-  });
+  })
   return newArr;
-};
+}
