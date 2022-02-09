@@ -122,3 +122,11 @@ function findOutlier(integers) {
     return oddNums[0];
   }
 }
+
+// solution to: https://www.codewars.com/kata/585d7d5adb20cf33cb000235/javascript
+// 'Find the unique number'
+
+function findUniq(arr) {
+  let repeatingNum = arr.filter((item, index) => arr.indexOf(item) !== index)
+  return arr.filter((item)=> item !== repeatingNum[0])[0]
+}
