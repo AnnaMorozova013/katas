@@ -130,3 +130,16 @@ function findUniq(arr) {
   let repeatingNum = arr.filter((item, index) => arr.indexOf(item) !== index)
   return arr.filter((item)=> item !== repeatingNum[0])[0]
 }
+
+// solution to: https://www.codewars.com/kata/52597aa56021e91c93000cb0/javascript
+// 'Moving Zeros To The End'
+
+function moveZeros (arr) {
+  const newArr = [...arr];
+  newArr.forEach((element) => {
+    if (element === 0) {
+      newArr.splice(newArr.indexOf(element), 1) && newArr.push(element); 
+    }
+  });
+  return newArr;
+};
